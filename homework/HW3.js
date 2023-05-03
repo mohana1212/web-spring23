@@ -22,34 +22,35 @@
 console.log(findForLoop(input, 900));*/
 
 //Given an array month: [Jan, Feb, Mar] and a date array: [1, 2, …, 10 ]
-const month = ["Jan", "Feb", "Mar"];
-const date = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-function printCalendar(month, date) {
-        let day = [];
-        for (let i = 0; i < month.length; i++) {
-                // i = 1
-                for (let j = 0; j < date.length; j++) {
-                        // j = 9
+// const month = ["Jan", "Feb", "Mar"];
+// const date = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// function printCalendar(month, date) {
+//         let day = [];
+//         for (let i = 0; i < month.length; i++) {
+//                 // i = 1
+//                 for (let j = 0; j < date.length; j++) {
+//                         // j = 9
 
-                        day.push(month[i]);
-                        day.push(date[j]);
-                }
-        }
-        return day;
-}
-console.log(printCalendar(month, date));
+//                         day.push(month[i]);
+//                         day.push(date[j]);
+//                 }
+//         }
+//         return day;
+// }
+// console.log(printCalendar(month, date));
 
 //Create a function called “cloneArray” that will take any array and return a copy of the array.
 
-const arr1 = [1, 4, 7, 3, 9];
-function cloneArray(array) {
-        if ((array = [...arr1])) {
-                // spread operator
-                console.log("Clone Array:", array);
-                return array;
-        }
-}
-console.log(cloneArray(arr1));
+// const arr1 = [1, 4, 7, 3, 9];
+// function cloneArray(array) {
+//         const clone = arr1.map(function () {});
+// if ((array = [...arr1])) {
+//         // spread operator
+//         console.log("Clone Array:", array);
+//         return array;
+// }
+// }
+// console.log(cloneArray(arr1));
 
 // 3.Write a function that takes in an array arr and a number n
 
@@ -58,16 +59,16 @@ console.log(cloneArray(arr1));
 // c) If an element exist then it should return that element, otherwise it will return the string “element does not exist”
 // d) Ex: function getNthElement (arr, n) { … }
 
-const input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-function getNthElement(arr, n) {
-        if (n >= arr.length) {
-                return "element does not exit";
-        } else {
-                return arr[n]; //input[7]
-        }
-}
+// const input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// function getNthElement(arr, n) {
+//         if (n >= arr.length) {
+//                 return "element does not exit";
+//         } else {
+//                 return arr[n]; //input[7]
+//         }
+// }
 
-console.log(getNthElement(input, 7));
+// console.log(getNthElement(input, 7));
 
 // 4) Write your own custom array.push and array.pop method called “customPush” and “customPop”
 
@@ -75,27 +76,49 @@ console.log(getNthElement(input, 7));
 //      customPush will return the length of the array after adding in the item
 //      Ex: customPush(arr, item) { ... }
 
-//  b) customPop will take in an array and remove the last element and return the removed element
+// //  b) customPop will take in an array and remove the last element and return the removed element
 
-arr1 = []; // arr1 = [8]
+// arr1 = []; // arr1 = [8]
 
-function customPush(arr, item) {
-        n = arr.length;
-        arr[n] = item;
-        return arr.length;
+// function customPush(arr, item) {
+//         n = arr.length;
+//         arr[n] = item;
+//         return arr.length;
+// }
+
+// function customPop(arr) {
+//         if (arr.length === 0) {
+//                 return undefined;
+//         } else {
+//                 const remove = arr[arr.length - 1];
+//                 arr.length = arr.length - 1;
+//                 return remove;
+//         }
+// }
+
+// console.log(customPush(arr1, 8));
+// console.log(customPush(arr1, 67));
+// console.log(customPush(arr1, 84));
+// console.log(customPop(arr1));
+
+// const arr5 = [7, 5, 8, 9, 3, 4];
+// function cloneWithReduce(array) {
+//         const sum = array.reduce(function (simulstion, currentelement) {
+//                 console.log("Dublicate:");
+//                 return simulstion + currentelement;
+//         }, 0);
+
+//         return sum;
+// }
+// console.log(cloneWithReduce(arr5)); /// 36
+
+const arr5 = [7, 5, 8, 9, 3, 4]; // simulation=7;currentelement=7;
+function cloneWithReduce(array) {
+        const clone = array.reduce(function (simulstion, currentelement) {
+                console.log("Dublicate:");
+                return array;
+        });
+
+        return clone;
 }
-
-function customPop(arr) {
-        if (arr.length === 0) {
-                return undefined;
-        } else {
-                const remove = arr[arr.length - 1];
-                arr.length = arr.length - 1;
-                return remove;
-        }
-}
-
-console.log(customPush(arr1, 8));
-console.log(customPush(arr1, 67));
-console.log(customPush(arr1, 84));
-console.log(customPop(arr1));
+console.log(cloneWithReduce(arr5));
