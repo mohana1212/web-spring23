@@ -104,7 +104,7 @@ console.log(findForLoop(input, 900));*/
 // const arr5 = [7, 5, 8, 9, 3, 4];
 // function cloneWithReduce(array) {
 //         const sum = array.reduce(function (simulstion, currentelement) {
-//                 console.log("Dublicate:");
+//                
 //                 return simulstion + currentelement;
 //         }, 0);
 
@@ -112,7 +112,7 @@ console.log(findForLoop(input, 900));*/
 // }
 // console.log(cloneWithReduce(arr5)); /// 36
 
-const arr5 = [7, 5, 8, 9, 3, 4]; // simulation=7;currentelement=7;
+const arr5 = [7, 5, 8, 9, 3, 4]; 
 function cloneWithReduce(array) {
         const clone = array.reduce(function (simulstion, currentelement) {
                 console.log("Dublicate:");

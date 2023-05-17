@@ -40,3 +40,5 @@ console.log(checkType([]));
 console.log(checkType(8));
 console.log(checkType("hello"));
 console.log(checkType(["hello"], ["World"]));
+
+
