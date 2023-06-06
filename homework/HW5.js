@@ -38,7 +38,7 @@ const animal2 = new Animal("blue", "two", "black");
 const animal3 = new Animal("black", "four", "brown");
 const animal4 = new Animal("yellow", "two", "white");
 
-// console.log(animal2, animal2, animal3);
+console.log(animal2, animal2, animal3);
 animal2.eat("meat");
 animal2.sleep("eyes closed");
 
