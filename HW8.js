@@ -1,4 +1,7 @@
 class Bulding {
+        #hasWalls;
+        #numOfWalls;
+        #roofShape;
         constructor(hasWalls, numOfWalls, roofShape) {
                 // super(brand, year, color);
 
@@ -13,36 +16,38 @@ class Bulding {
                 console.log("DOOR CLOSE");
         }
 
-        get hasWalls() {
+        static gethasWalls() {
                 return this.#hasWalls;
         }
 
-        set hasWalls(value) {
+        sethasWalls(value) {
                 this.#hasWalls = value;
         }
 
-        get numOfWalls() {
+        static getnumOfWalls() {
                 return this.#numOfWalls;
         }
 
-        set numOfWalls(value) {
+        setnumOfWalls(value) {
                 this.#numOfWalls = value;
         }
 
-        get roofShape() {
+        static getroofShape() {
                 return this.#roofShape;
         }
 
-        set roofShape(value) {
+        setroofShape(value) {
                 this.#roofShape = value;
         }
 }
 class Gym extends Bulding {
-        constructor(hasWalls, numOfWalls, roofShape, gymName, hasPool) {
+        #gymName;
+        #hasPool;
+        constructor(hasWalls, numOfWalls, roofShape) {
                 super(hasWalls, numOfWalls, roofShape);
 
-                this.#gymName = gymName;
-                this.#hasPool = hasPool;
+                this.#gymName = "Fitness19";
+                this.#hasPool = "swiming";
         }
         closeGym() {
                 console.log("Gym Closed");
@@ -52,24 +57,27 @@ class Gym extends Bulding {
                 console.log("Gym opened");
         }
 
-        get gymName() {
+        static getgymName() {
                 return this.#gymName;
         }
 
-        set gymName(value) {
+        setgymName(value) {
                 this.#gymName = value;
         }
 
-        get hasPool() {
+        static gethasPool() {
                 return this.#hasPool;
         }
 
-        set hasPool(value) {
+        sethasPool(value) {
                 this.#hasPool = value;
         }
 }
 
 class Bank extends Bulding {
+        #numOfvault;
+        #numOfStaff;
+        #name;
         constructor(
                 hasWalls,
                 numOfWalls,
@@ -93,32 +101,36 @@ class Bank extends Bulding {
                 console.log("Bank Opened");
         }
 
-        get numOfvault() {
+        static getnumOfvault() {
                 return this.#numOfvault;
         }
 
-        set numOfvault(value) {
+        setnumOfvault(value) {
                 this.#numOfvault = value;
         }
 
-        get numOfStaff() {
+        static getnumOfStaff() {
                 return this.#numOfStaff;
         }
 
-        set numOfStaff(value) {
+        setnumOfStaff(value) {
                 this.#numOfStaff = value;
         }
 
-        get name() {
+        static getname() {
                 return this.#name;
         }
 
-        set name(value) {
+        setname(value) {
                 this.#name = value;
         }
 }
 
-const myGym = new Gym(true, 4, "square", "JS center", true);
-console.log(myGym.gymName);
-const myBank = new Bank(true, 1, "circle", 20, 100, "BOFA");
-console.log(myBank.name);
+// const myGym = new Gym("true", 4, "square", "JS center", "true");
+
+// console.log(myGym);
+// const myBank = new Bank("true", 3, "circle", 20, 100, "BOFA");
+
+// console.log(myBank.name);
+console.log("GYM", new Gym("true", "4", "square", "JS center", "true"));
+console.log("BANK", new Bank("true", "3", "circle", "20", "100", "BOFA"));
