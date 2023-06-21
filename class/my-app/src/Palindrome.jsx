@@ -6,15 +6,22 @@ class Palindrome extends Component {
 
                 this.state = {
                         text: "",
+                        textB: "",
                 };
 
                 this.handleChange = this.handleChange.bind(this);
                 this.handleClear = this.handleClear.bind(this);
+                this.handleChangeTextB = this.handleChangeTextB.bind(this);
         }
 
         handleChange(event) {
                 this.setState({
                         text: event.target.value,
+                });
+        }
+        handleChangeTextB(event) {
+                this.setState({
+                        textB: event.target.value,
                 });
         }
 
@@ -33,14 +40,10 @@ class Palindrome extends Component {
         // A controlled component will force the input state to synchronize with the React state
 
         render() {
-                // console.log("text state", this.state.text);
-                // console.log("test racecar", this.isPalindrome("raceca"));
-                console.log("test racecar", this.isPalindrome("raceca"));
-                console.log(
-                        "test racecar not a palindrome",
-                        this.isPalindrome("racecar")
-                );
-
+                const isPalindrome = this.isPalindrome(this.state.text);
+                const message = isPalindrome
+                        ? `${this.state.text} IS a palindrome`
+                        : `${this.state.text} IS NOT a palindrome`;
                 return (
                         <div>
                                 <h1>Palindrome</h1>
@@ -50,7 +53,18 @@ class Palindrome extends Component {
                                                 id="palindrome"
                                                 type="text"
                                                 onChange={this.handleChange}
-                                                value={this.state.text.string}
+                                                value={this.state.text}
+                                        />
+                                </label>
+                                <label id="palindrome">
+                                        Enter some textB:{" "}
+                                        <input
+                                                id="palindrome"
+                                                type="text"
+                                                onChange={
+                                                        this.handleChangeTextB
+                                                }
+                                                value={this.state.text}
                                         />
                                 </label>
                                 <button
@@ -62,9 +76,7 @@ class Palindrome extends Component {
 
                                 <br />
 
-                                <h2>
-                                        {this.state.text} IS/IS NOT a palindrome
-                                </h2>
+                                <h2>{message}</h2>
                         </div>
                 );
         }
