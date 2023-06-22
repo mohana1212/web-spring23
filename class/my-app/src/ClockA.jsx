@@ -1,6 +1,6 @@
 import React from "react";
 class ClockA extends React.Component {
-        constructor(proops) {
+        constructor(props) {
                 this.state = {
                         date: new Date(),
                         counter: 0,
@@ -22,7 +22,13 @@ class ClockA extends React.Component {
                 };
                 this.setState(newState);
         }
-        incrementCounter() {}
+        incrementCounter() {
+                const counter = 1;
+                while (counter <= 10) {
+                        console.log(counter);
+                        counter++;
+                }
+        }
         render() {
                 console.log("ClockA rendering");
                 console.log("clock state", this.state);
@@ -32,7 +38,7 @@ class ClockA extends React.Component {
                                 <formatedDate date={this.state.date} />
                                 <div>Counter:{this.state.counter}</div>
                                 <button
-                                        onClick={this.incrementCounter()}
+                                        onClick={this.incrementCounter}
                                 ></button>
                         </div>
                 );
