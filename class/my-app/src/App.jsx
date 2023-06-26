@@ -2,6 +2,7 @@ import { Component } from "react";
 import "./App.css";
 import ClockA from "./ClockA";
 import Palindrome from "./Palindrome";
+import TestEffectCounter from "./TestEffectCounter";
 
 class App extends Component {
         constructor(props) {
@@ -27,12 +28,14 @@ class App extends Component {
                 console.log("state", this.state.showGreeting);
                 return (
                         <div>
-                                {this.state.showClockA ? <ClockA /> : null}
+                                {/* {this.state.showClockA ? <ClockA /> : null}
                                 <button onClick={this.handleToggleClockA}>
                                         Toggle ClockA
-                                </button>
+                                        
+                                </button> */}
                                 <div>
-                                        <Palindrome />
+                                        {/* <Palindrome /> */}
+                                        <TestEffectCounter />
                                 </div>
                                 <div>
                                         <button onClick={this.handleClick}>
