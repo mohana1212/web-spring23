@@ -35,8 +35,10 @@ class App extends Component {
                                 </button> */}
                                 <div>
                                         {/* <Palindrome /> */}
-                                        <TestEffectCounter />
+                                        {/* <TestEffectCounter /> */}
+                                        <dice />
                                 </div>
+
                                 <div>
                                         <button onClick={this.handleClick}>
                                                 Update Greeting
