@@ -1,6 +1,8 @@
 import { Component } from "react";
 import "./App.css";
 import ClockA from "./ClockA";
+import Fetch from "./Fetch";
+import FetchUser from "./FetchUser";
 import Palindrome from "./Palindrome";
 import TestEffectCounter from "./TestEffectCounter";
 
@@ -36,13 +38,9 @@ class App extends Component {
                                 <div>
                                         {/* <Palindrome /> */}
                                         {/* <TestEffectCounter /> */}
-                                        <dice />
-                                </div>
-
-                                <div>
-                                        <button onClick={this.handleClick}>
-                                                Update Greeting
-                                        </button>
+                                        {/* <Fetch /> */}
+                                        <FetchUser />
+                                        {/* <dice /> */}
                                 </div>
                         </div>
                 );
