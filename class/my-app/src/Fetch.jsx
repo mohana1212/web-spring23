@@ -27,11 +27,12 @@ const Fetch = () => {
                         <h1>FETCH</h1>
                         <ul>
                                 {posts?.map((post) => {
-                                        return;
-                                        <li>
-                                                <h3>{post.id}</h3>
-                                                <p>{post.body}</p>
-                                        </li>;
+                                        return (
+                                                <li key={post.id}>
+                                                        <h3>{post.id}</h3>
+                                                        <p>{post.body}</p>
+                                                </li>
+                                        );
                                 })}
                         </ul>
                 </div>

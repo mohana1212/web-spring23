@@ -1,42 +1,42 @@
-import { useEffect, useState } from "react";
 import axios from "axios";
-
-const useFetchUser = (url) => {
+import { useEffect, useState } from "react";
+const useFetch = (url) => {
         const [state, setState] = useState({
-                data: null,
+                posts: null,
                 loading: false,
                 error: null,
         });
-
         useEffect(() => {
-                setState({ data: null, loading: true, error: null });
-                console.log("Before making an API call");
-
-                (async function fetchUserData(url) {
+                setState({
+                        posts: null,
+                        loading: true,
+                        error: null,
+                });
+                console.log("before making API call");
+                (async function fetchData(url) {
                         try {
-                                console.log("Inside fetch data");
+                                console.log("Inside Fetch Data");
                                 const result = await axios.get(url);
                                 console.log("result", result);
                                 const { data } = result;
                                 setState({
-                                        data: data,
+                                        posts: data,
                                         loading: false,
                                         error: null,
                                 });
                         } catch (error) {
                                 console.log("error", error);
                                 setState({
-                                        data: null,
+                                        posts: null,
                                         loading: false,
                                         error: error,
                                 });
                         }
                 })(url);
+
+                // fetchData(url);
                 console.log("After making API call");
         }, []);
-        // fetchData(url);
-        //         console.log("After making API call");
-        // }, []);
         return state;
 };
-export default useFetchUser;
+export default useFetch;

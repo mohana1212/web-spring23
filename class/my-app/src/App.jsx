@@ -2,7 +2,10 @@ import { Component } from "react";
 import "./App.css";
 import ClockA from "./ClockA";
 import Fetch from "./Fetch";
+import FetchA from "./FetchA";
 import FetchUser from "./FetchUser";
+import FetchUserOne from "./FetchUserOne";
+import Loginform from "./LoginForm";
 import Palindrome from "./Palindrome";
 import TestEffectCounter from "./TestEffectCounter";
 
@@ -39,7 +42,11 @@ class App extends Component {
                                         {/* <Palindrome /> */}
                                         {/* <TestEffectCounter /> */}
                                         {/* <Fetch /> */}
-                                        <FetchUser />
+                                        {/* <FetchA /> */}
+                                        {/* <FetchUserOne /> */}
+                                        <Loginform />
+                                        {/* <FetchUser /> */}
+                                        {/* <FetchUserOne /> */}
                                         {/* <dice /> */}
                                 </div>
                         </div>
