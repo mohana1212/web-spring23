@@ -8,6 +8,7 @@ import FetchUserOne from "./FetchUserOne";
 import Loginform from "./LoginForm";
 import Palindrome from "./Palindrome";
 import TestEffectCounter from "./TestEffectCounter";
+import User from "./components/User";
 
 class App extends Component {
         constructor(props) {
@@ -44,7 +45,8 @@ class App extends Component {
                                         {/* <Fetch /> */}
                                         {/* <FetchA /> */}
                                         {/* <FetchUserOne /> */}
-                                        <Loginform />
+                                        {/* <Loginform /> */}
+                                        <User />
                                         {/* <FetchUser /> */}
                                         {/* <FetchUserOne /> */}
                                         {/* <dice /> */}
