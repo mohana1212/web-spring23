@@ -12,7 +12,7 @@ const User = () => {
 
         const fetchData = () => {
                 if (userId === 0) {
-                        return; // Don't make an API call if user id is 0
+                        return; // Don't make an API call if user id to 0
                 }
 
                 setLoading(true);
