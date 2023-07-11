@@ -1,5 +1,5 @@
 import React from "react";
-
+import User from "../../components/User";
 const Input = ({ label, ...props }) => {
         return (
                 <div className="input-container">
